@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>字符串转为数组 · GitBook</title>
+        <title>JS技巧 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -56,8 +56,6 @@
     <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
-    
-    <link rel="next" href="page3.html" />
     
     
     <link rel="prev" href="page1.html" />
@@ -120,20 +118,7 @@
                 <a href="page2.html">
             
                     
-                    字符串转为数组
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.4" data-path="page3.html">
-            
-                <a href="page3.html">
-            
-                    
-                    一些有用的数组
+                    JS技巧
             
                 </a>
             
@@ -171,7 +156,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >字符串转为数组</a>
+        <a href="." >JS技巧</a>
     </h1>
 </div>
 
@@ -187,10 +172,56 @@
                                 <section class="normal markdown-section">
                                 
                                 <ul>
-<li>&#x5B57;&#x7B26;&#x4E32;&#x8F6C;&#x4E3A;&#x6570;&#x7EC4;  <pre><code>  var aaa = &apos;abc12345&apos;;
+<li><p>&#x5B57;&#x7B26;&#x4E32;&#x8F6C;&#x4E3A;&#x6570;&#x7EC4;  </p>
+<pre><code>  var aaa = &apos;abc12345&apos;;
   aaa.split(&apos;&apos;) // [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;4&quot;, &quot;5&quot;]`  
   [...aaa]
   Array.from(aaa)
+  Object.assign([], aaa)
+</code></pre></li>
+<li><p>Array.of()<br>&#x770B;&#x6BB5;&#x4EE3;&#x7801;</p>
+<pre><code>new Array(5,10); // [5, 10]
+new Array(5); // &#x957F;&#x5EA6;&#x4E3A;5&#x7684;&#x7A7A;&#x6570;&#x7EC4;
+</code></pre><pre><code>Array.of(5) // [5]
+Array.of(5, 10) // [5, 10]
+</code></pre></li>
+<li><p>Array.from()  </p>
+<pre><code>const numbers = [1, 2, 3, 4, 5];
+const copy = Array.from(numbers, value =&gt; value * 2);
+console.log(copy) // [2, 4, 6, 8, 10]
+</code></pre><pre><code>Array.from(document.scripts)
+.forEach(script =&gt; console.log(script.src));
+</code></pre></li>
+<li><p>Array.find()<br>&#x8FD4;&#x56DE;&#x7B2C;&#x4E00;&#x4E2A;&#x7B26;&#x5408;&#x7684;&#x5143;&#x7D20;</p>
+<pre><code>const employees = [
+{ name: &quot;David Carlson&quot;, age: 30 },
+{ name: &quot;John Cena&quot;, age: 34 },
+{ name: &quot;Mike Sheridan&quot;, age: 25 },
+{ name: &quot;John Carte&quot;, age: 50 }
+];
+const employee = employees.find(employee =&gt;       
+employee.name.indexOf(&quot;John&quot;) &gt; -1);
+console.log(employee); // { name: &quot;John Cena&quot;, age: 34 }
+</code></pre></li>
+<li><p>Array.findIndex()  </p>
+<pre><code>const employees = [
+{ name: &quot;David Carlson&quot;, age: 30 },
+{ name: &quot;John Cena&quot;, age: 34 },
+{ name: &quot;Mike Sheridan&quot;, age: 25 },
+{ name: &quot;John Carte&quot;, age: 50 }
+];
+const index = employees.findIndex(employee =&gt; employee.name.indexOf(&quot;John&quot;) &gt; -1);
+console.log(index); // 1
+</code></pre></li>
+<li><p>Array.filter()  </p>
+<pre><code>const employees = [
+{ name: &quot;David Carlson&quot;, age: 30 },
+{ name: &quot;John Cena&quot;, age: 34 },
+{ name: &quot;Mike Sheridan&quot;, age: 25 },
+{ name: &quot;John Carte&quot;, age: 50 }
+];
+const employee = employees.filter(employee =&gt; employee.name.indexOf(&quot;John&quot;) &gt; -1);
+console.log(employee); // [ { name: &quot;John Cena&quot;, age: 34 }, { name: &quot;John Carte&quot;, age: 50 }]
 </code></pre></li>
 </ul>
 
@@ -220,14 +251,10 @@
 
             
                 
-                <a href="page1.html" class="navigation navigation-prev " aria-label="Previous page: var, let, const介绍与使用">
+                <a href="page1.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: var, let, const介绍与使用">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="page3.html" class="navigation navigation-next " aria-label="Next page: 一些有用的数组">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -236,7 +263,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"字符串转为数组","level":"1.3","depth":1,"next":{"title":"一些有用的数组","level":"1.4","depth":1,"path":"page3.md","ref":"page3.md","articles":[]},"previous":{"title":"var, let, const介绍与使用","level":"1.2","depth":1,"path":"page1.md","ref":"page1.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"page2.md","mtime":"2020-04-28T14:39:14.307Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-29T13:26:00.616Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"JS技巧","level":"1.3","depth":1,"previous":{"title":"var, let, const介绍与使用","level":"1.2","depth":1,"path":"page1.md","ref":"page1.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"page2.md","mtime":"2020-04-29T14:04:55.224Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-29T14:15:13.291Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
