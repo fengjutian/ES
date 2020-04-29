@@ -67,6 +67,20 @@ const employee = employees.filter(employee => employee.name.indexOf("John") > -1
 console.log(employee); // [ { name: "John Cena", age: 34 }, { name: "John Carte", age: 50 }]
 ```
 
+deep clone
+```
+var aa = [1, 2, 3];
+var bb = [...aa];
+aa = [1]
+console.log(aa) // [1]
+console.log(bb) // [1, 2, 3]
+
+var cc = [4];
+var dd = cc.slice();
+cc = [5];
+console.log(dd) // [4]
+```
+
 
 
 
