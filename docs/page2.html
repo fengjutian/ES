@@ -57,8 +57,10 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
+    <link rel="next" href="page3.html" />
     
-    <link rel="prev" href="page1.html" />
+    
+    <link rel="prev" href="./" />
     
 
     </head>
@@ -100,12 +102,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2" data-path="page1.html">
+        <li class="chapter active" data-level="1.2" data-path="page2.html">
             
-                <a href="page1.html">
+                <a href="page2.html">
             
                     
-                    var, let, const介绍与使用
+                    JS技巧
             
                 </a>
             
@@ -113,12 +115,12 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.3" data-path="page2.html">
+        <li class="chapter " data-level="1.3" data-path="page3.html">
             
-                <a href="page2.html">
+                <a href="page3.html">
             
                     
-                    JS技巧
+                    常见的数组
             
                 </a>
             
@@ -224,7 +226,18 @@ const employee = employees.filter(employee =&gt; employee.name.indexOf(&quot;Joh
 console.log(employee); // [ { name: &quot;John Cena&quot;, age: 34 }, { name: &quot;John Carte&quot;, age: 50 }]
 </code></pre></li>
 </ul>
+<p>deep clone</p>
+<pre><code>var aa = [1, 2, 3];
+var bb = [...aa];
+aa = [1]
+console.log(aa) // [1]
+console.log(bb) // [1, 2, 3]
 
+var cc = [4];
+var dd = cc.slice();
+cc = [5];
+console.log(dd) // [4]
+</code></pre>
                                 
                                 </section>
                             
@@ -251,10 +264,14 @@ console.log(employee); // [ { name: &quot;John Cena&quot;, age: 34 }, { name: &q
 
             
                 
-                <a href="page1.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: var, let, const介绍与使用">
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: 简介|Introduction">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
+                
+                <a href="page3.html" class="navigation navigation-next " aria-label="Next page: 常见的数组">
+                    <i class="fa fa-angle-right"></i>
+                </a>
                 
             
         
@@ -263,7 +280,7 @@ console.log(employee); // [ { name: &quot;John Cena&quot;, age: 34 }, { name: &q
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"JS技巧","level":"1.3","depth":1,"previous":{"title":"var, let, const介绍与使用","level":"1.2","depth":1,"path":"page1.md","ref":"page1.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"page2.md","mtime":"2020-04-29T14:04:55.224Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-04-29T14:15:13.291Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"JS技巧","level":"1.2","depth":1,"next":{"title":"常见的数组","level":"1.3","depth":1,"path":"page3.md","ref":"page3.md","articles":[]},"previous":{"title":"简介|Introduction","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"page2.md","mtime":"2020-05-19T11:11:49.665Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-05-19T12:08:18.338Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
